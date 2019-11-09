@@ -8,6 +8,7 @@ TagManager:
   - PisoReactivo
   - PisoPoder
   - PisoNormal
+  - Enemy
   layers:
   - Default
   - TransparentFX
