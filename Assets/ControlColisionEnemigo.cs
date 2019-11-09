@@ -18,7 +18,7 @@ public class ControlColisionEnemigo : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Pb.BarValue += nivelDeAfectacion;
-            
+           
         }
     }
 
@@ -26,6 +26,8 @@ public class ControlColisionEnemigo : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            other.gameObject.GetComponent<CharacterController2D>().m_JumpForce = 1000;
+            other.gameObject.GetComponent<PlayerMovement>().runSpeed = 10;
             GetComponent<AudioSource>().Play();
         }
     }
@@ -34,6 +36,8 @@ public class ControlColisionEnemigo : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            other.gameObject.GetComponent<CharacterController2D>().m_JumpForce = 700;
+            other.gameObject.GetComponent<PlayerMovement>().runSpeed = 40;
             GetComponent<AudioSource>().Pause();
         }
     }

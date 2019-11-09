@@ -144,8 +144,4 @@ public class CharacterController2D : MonoBehaviour
 		transform.localScale = theScale;
 	}
 
-    public void SetJumpForce(int valor)
-    {
-        m_JumpForce = valor;
-    }
 }
